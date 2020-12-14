@@ -8,7 +8,7 @@ def uploaded_location(instance, filename):
 class Company(models.Model):
     name = models.CharField(max_length=250)
     tagline = models.CharField(max_length=250)
-    logo = ResizedImageField(size=[520, 520], crop=['middle', 'center'], quality=100, upload_to=uploaded_location,null=True, blank=True)
+    logo = ResizedImageField(size=[240, 144], crop=['middle', 'center'], quality=100, upload_to=uploaded_location,null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     facebook = models.CharField(max_length=250,null=True, blank=True)
     instagram = models.CharField(max_length=250,null=True, blank=True)
